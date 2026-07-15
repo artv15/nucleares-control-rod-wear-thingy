@@ -3,11 +3,12 @@ using BepInEx;
 using BepInEx.Logging;
 using BepInEx.Unity.Mono;
 using HarmonyLib;
+using HarmonyLib.Tools;
 
 namespace RodsFixer9000;
 
 #pragma warning disable BepInEx002
-[BepInPlugin("RodsFixer9000", "Rods Fixer 9000", "0.0.0-Dev")]
+[BepInPlugin("RodsFixer9000", "Rods Fixer 9000", "1.0")]
 public class Plugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
@@ -16,9 +17,11 @@ public class Plugin : BaseUnityPlugin
     {
         Logger = base.Logger;
         
+        HarmonyFileLog.Enabled = true;
+        
         Logger.LogInfo("Patching...");
         var hrm = new Harmony("RodFixer.Harmony.Main");
-        hrm.PatchAll();
+        hrm.PatchAll(typeof(Patches.RodDegradationPatch));
         Logger.LogInfo("Patches applied!");
     }
 }
