@@ -6,7 +6,7 @@ Patches control rods to never be affected by wear and tear.
 ## FAQ
 - ### how to install
 
-First, install BepInEx **6**, you can find the archive from here.\
+First, install [BepInEx **6**](https://github.com/BepInEx/BepInEx/releases#release-v6.0.0-pre.2)\
 After downloading it, unpack it in the game's folder (where Nucleares.exe is located)\
 Then, download the plugin from the releases page *(or build it yourself, most refs are done with nuget)*, and put it in BepInEx/plugins
 If you did everything correctly, you should get a console pop up, and a couple logs from the plugin:
