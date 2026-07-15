@@ -1,0 +1,32 @@
+# Build outputs
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+[Ll]ogs/
+
+# Visual Studio / Rider / IDE files
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# .NET / NuGet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+*.snupkg
+
+# Misc generated files
+*.log
+*.cache
+*.tmp
+*.temp
+
+# References
+lib/
